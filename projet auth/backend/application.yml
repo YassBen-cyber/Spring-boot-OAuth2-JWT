@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/secureauth
-    username: yacine
-    password: joueur12
+    url: jdbc:postgresql://localhost:5432/votre-bdd
+    username: *****
+    password: *****
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
@@ -18,14 +18,10 @@ spring:
       client:
         registration:
           google:
-            client-id: 28723060079-2h5maukbmeh517caou4ihmlc01jccgbr.apps.googleusercontent.com
-            client-secret: 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
+            client-id: votre id
+            client-secret: votre secret
             scope:
               - email
               - profile
             redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
 
-jwt:
-  secret: IMesriS9VAw0O5RS8hRRF8v2zGNSDG5ZpjiAwnmdEOmbzZyVIFQDXrQU_TkaSR4LKenf1hRwuIJsU6-q00TqaQ
-  expiration: 1200000
-  refresh-expiration: 604800000
